@@ -1,3 +1,4 @@
+document.oncontextmenu = null;
 var planets;
 
 var canvas;
@@ -9,7 +10,7 @@ function windowResized() {
 
 function setup() {
 	canvas = createCanvas(windowWidth, windowHeight);
-	canvas.position(0,0);
+	canvas.position(0, 0);
 	canvas.style('z-index', '-1');
 	var p = new Bola(mouseX, mouseY);
 	planets = [p];
@@ -17,19 +18,27 @@ function setup() {
 
 
 function draw() {
-	background(255, 135, 153);
+	background(111, 206, 197);
 	if (planets.length > 0) {
 		for (var i = 0; i < planets.length; i++) {
 			planets[i].move();
 			planets[i].display();
 		}
 	}
-	if (mouseIsPressed == true){
-		  	planets.push(new Bola(mouseX, mouseY));
+	if (mouseIsPressed == true) {
+		planets.push(new Bola(mouseX, mouseY));
 	}
-	
-	
+	if (mouseIsPressed) {
+		if (mouseButton == RIGHT) {
+			planets = [];
+		}
+
+	}
+
+
 }
+
+
 
 // Bola class
 function Bola(x, y) {
