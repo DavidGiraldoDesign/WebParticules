@@ -1,0 +1,17 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 100;
+	font-size: 20pt;
+	text-align: center;
+	margin-top: 40%;
+	width: auto;
+	height: auto;
+	color: aliceblue;
+	display: block;
+}
