@@ -24,10 +24,11 @@ function draw() {
 			planets[i].display();
 		}
 	}
-}
-
-function mousePressed() {
-	planets.push(new Bola(mouseX, mouseY));
+	if (mouseIsPressed == true){
+		  	planets.push(new Bola(mouseX, mouseY));
+	}
+	
+	
 }
 
 // Bola class
